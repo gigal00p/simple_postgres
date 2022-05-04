@@ -6,6 +6,8 @@ services:
       - database.env
     volumes:
       - database-data:/var/lib/postgresql/data/
+      - ~/.psqlrc:/etc/postgresql-common/psqlrc
+      - ~/.psql_history:/root/.psql_history
     ports:
       - 5432:5432
 
